@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2391378534993702324}
   - component: {fileID: 6332212332814311470}
   - component: {fileID: 9001438121778919437}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -135,4 +135,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
+  damage: 25
   rb: {fileID: 2391378534993702324}
