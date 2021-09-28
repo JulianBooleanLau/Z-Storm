@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Zombie : MonoBehaviour
+public class ObjectHealth : MonoBehaviour
 {
 
     public int health = 100;

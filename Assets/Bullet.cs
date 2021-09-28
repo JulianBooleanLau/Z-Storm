@@ -18,11 +18,11 @@ public class Bullet : MonoBehaviour
     void OnTriggerEnter2D (Collider2D hitInfo)
     {
 
-        Zombie zombie = hitInfo.GetComponent<Zombie>();
-        Debug.Log(hitInfo.GetComponent<Zombie>());
-        if (zombie != null)
+        ObjectHealth objectHealth = hitInfo.GetComponent<ObjectHealth>();
+        Debug.Log(hitInfo.GetComponent<ObjectHealth>());
+        if (objectHealth != null)
         {
-            zombie.TakeDamage(damage);
+            objectHealth.TakeDamage(damage);
         }
 
         Destroy(gameObject);
