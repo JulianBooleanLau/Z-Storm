@@ -20,6 +20,10 @@ public class ObjectHealth : MonoBehaviour
     void Die ()
     {
         Destroy(gameObject);
+        if (gameObject.tag == "Zombie")
+        {
+            KillCounter.numKills += 1;
+        }
     }
     
 }
