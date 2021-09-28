@@ -17,7 +17,9 @@ public class Bullet : MonoBehaviour
 
     void OnTriggerEnter2D (Collider2D hitInfo)
     {
+
         Zombie zombie = hitInfo.GetComponent<Zombie>();
+        Debug.Log(hitInfo.GetComponent<Zombie>());
         if (zombie != null)
         {
             zombie.TakeDamage(damage);
