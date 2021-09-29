@@ -6,7 +6,7 @@
  
 ## Snapshot
 
- ![Alt Text](https://gyazo.com/8de23869b77a441a6f18b8725da9aa35)
+ ![Alt Text](https://i.imgur.com/DtyHwmy.gif)
 
 ## Development
 
