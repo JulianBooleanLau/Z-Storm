@@ -12,14 +12,16 @@ public class Bullet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rb.velocity = transform.right * speed * Random.Range(0.6f, 1.4f);
+        rb.velocity = transform.right * speed * Random.Range(0.5f, 1.5f);
     }
 
     void OnTriggerEnter2D (Collider2D hitInfo)
     {
 
         ObjectHealth objectHealth = hitInfo.GetComponent<ObjectHealth>();
+
         Debug.Log(hitInfo.GetComponent<ObjectHealth>());
+
         if (objectHealth != null)
         {
             objectHealth.TakeDamage(damage);
