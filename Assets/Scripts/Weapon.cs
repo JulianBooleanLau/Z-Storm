@@ -9,6 +9,7 @@ public class Weapon : MonoBehaviour
     public GameObject bulletPrefab;
     public AudioSource gunshotSound;
     public AudioSource reloadSound;
+    public AudioSource emptySound;
 
     // Update is called once per frame
     void Update()
@@ -61,6 +62,10 @@ public class Weapon : MonoBehaviour
                 AmmoCountScript.maxAmmo -= 2;
             }
             reloadSound.Play();
+        }
+        else
+        {
+            emptySound.Play();
         }
     }
 
