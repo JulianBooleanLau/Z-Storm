@@ -4,10 +4,33 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public HealthBar healthBar;
+    public int maxHealth = 50;
+    public int currentHealth;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
+    }
+
+    //Player damage
+    void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+        healthBar.SetHealth(currentHealth);
+    }
+
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        Debug.Log("Damage taken" + col);
+
+        if (col.gameObject != null && col.gameObject.tag == "Zombie")
+        {
+            //pickupSound.Play();
+            TakeDamage(20);
+        }
     }
 
     //movement speed in units per second

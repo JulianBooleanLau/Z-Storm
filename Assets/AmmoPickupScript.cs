@@ -4,17 +4,7 @@ using UnityEngine;
 
 public class AmmoPickupScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public AudioSource pickupSound;
 
     void OnTriggerEnter2D(Collider2D col)
     {
@@ -22,10 +12,9 @@ public class AmmoPickupScript : MonoBehaviour
 
         if (col.gameObject != null && col.gameObject.tag == "Player")
         {
+            pickupSound.Play();
             AmmoCountScript.maxAmmo += 2;
             Destroy(gameObject);
         }
-
-        
     }
 }
